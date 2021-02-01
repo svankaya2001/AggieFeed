@@ -25,7 +25,7 @@ public class Post {
         return published;
     }
 
-    public Post getData(JSONObject jsonObject){
+    public static Post getData(JSONObject jsonObject){
         Post post = new Post();
         try {
             JSONObject actorInfo = jsonObject.getJSONObject("actor");
@@ -41,7 +41,7 @@ public class Post {
         return post;
     }
 
-    public ArrayList<Post> getPosts(JSONArray jsonArray){
+    public static ArrayList<Post> getPosts(JSONArray jsonArray){
         ArrayList<Post> posts = new ArrayList<Post>(25);
         for(int i=0; i<25;i++){
             try {
